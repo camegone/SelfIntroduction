@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="terminal">
+
+  <header class="hero">
+    {{ if eq .Lang "ja" }}
+      <p class="prompt"><span class="prompt-sym">$</span> whoami</p>
+    {{ else }}
+      <p class="diff-head">--- locale/ja.po<br>+++ locale/{{ .Lang }}.po</p>
+    {{ end }}
+    <h1 class="name">{{ .Title }}</h1>
+    <p class="role">{{ .Params.role }}</p>
+  </header>
+
+  <section class="about">
+    <h2 class="section-title">about</h2>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </section>
+
+  <section class="links">
+    <h2 class="section-title">links</h2>
+    <p class="prompt"><span class="prompt-sym">$</span> ls -la ~/links</p>
+    <ul class="ls-list">
+      {{ range .Params.links }}
+      <li>
+        <a href="{{ .url }}" rel="me noopener" target="_blank">
+          <span class="perm">drwxr-xr-x</span>
+          <span class="lname">{{ .name }}</span>
+          <span class="arrow">&rarr;</span>
+          <span class="lurl">{{ .url }}</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  <footer class="lang-switch">
+    <p class="prompt"><span class="prompt-sym">$</span> export LANG=</p>
+    <ul>
+      {{ range .AllTranslations }}
+      <li>
+        <a href="{{ .RelPermalink }}"{{ if eq .Lang $.Lang }} class="current" aria-current="page"{{ end }}>
+          {{ .Language.LanguageName }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </footer>
+
+</div>
+{{ end }}

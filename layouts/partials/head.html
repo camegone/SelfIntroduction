@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ .Title }} — {{ .Params.role }}</title>
+<meta name="description" content="{{ .Params.description | default .Summary }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{ range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+{{ end }}
+<link rel="alternate" hreflang="x-default" href="{{ "/en/" | absURL }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ .Site.Title | jsonify }},
+  "description": {{ (.Params.description | default .Summary) | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "sameAs": [
+    {{ range $i, $l := .Params.links }}{{ if $i }},{{ end }}{{ $l.url | jsonify }}{{ end }}
+  ]
+}
+</script>
