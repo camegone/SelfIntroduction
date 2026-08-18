@@ -1,4 +1,4 @@
-baseURL = "camegone-self-introduction.camegone-cf.workers.dev/"   # ← 実際のドメインに書き換えてください（末尾は / のまま）
+baseURL = "https://camegone-self-introduction.camegone-cf.workers.dev/"   # ← 実際のドメインに書き換えてください（末尾は / のまま）
 title = "camegone"
 locale = "ja-JP"
 defaultContentLanguage = "en"
