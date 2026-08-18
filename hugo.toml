@@ -1,26 +1,27 @@
 baseURL = "https://example.com/"   # ← 実際のドメインに書き換えてください（末尾は / のまま）
 title = "camegone"
-languageCode = "ja-JP"
+locale = "ja-JP"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]   # tags/categories等の未使用ページを生成しない
 
 [languages]
   [languages.ja]
-    languageName = "日本語"
+    label = "日本語"
     weight = 1
     contentDir = "content/ja"
-    languageCode = "ja-JP"
+    locale = "ja-JP"
   [languages.en]
-    languageName = "English"
+    label = "English"
     weight = 2
     contentDir = "content/en"
-    languageCode = "en-US"
+    locale = "en-US"
   [languages.eo]
-    languageName = "Esperanto"
+    label = "Esperanto"
     weight = 3
     contentDir = "content/eo"
-    languageCode = "eo"
+    locale = "eo"
 
 [outputs]
   home = ["HTML"]

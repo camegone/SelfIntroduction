@@ -2,7 +2,7 @@
   // プロジェクト名（Cloudflareダッシュボードのプロジェクト名と合わせてください）
   "name": "camegone-self-introduction",
   "main": "./src/index.js",
-  "compatibility_date": "2026-08-19",
+  "compatibility_date": "2026-08-01",
   "build": {
     "command": "chmod a+x build.sh && ./build.sh"
   },
