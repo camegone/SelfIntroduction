@@ -25,5 +25,9 @@ enableRobotsTXT = true
 [outputs]
   home = ["HTML"]
 
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
 [params]
   # サイト全体で使う値があればここに追加できます

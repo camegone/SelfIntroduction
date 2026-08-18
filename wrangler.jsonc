@@ -1,0 +1,14 @@
+{
+  // プロジェクト名（Cloudflareダッシュボードのプロジェクト名と合わせてください）
+  "name": "camegone-self-introduction",
+  "main": "./src/index.js",
+  "compatibility_date": "2026-08-19",
+  "build": {
+    "command": "chmod a+x build.sh && ./build.sh"
+  },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page"
+  }
+}
