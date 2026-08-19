@@ -17,6 +17,18 @@
   --space-5: 5rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:   #14170F;
+    --surface: #1B1F17;
+    --ink:     #E8ECDF;
+    --muted:   #8B9480;
+    --add:     #4CC98A;
+    --remove:  #E2695C;
+    --border:  #2C3226;
+  }
+}
+
 * { box-sizing: border-box; }
 
 html, body {
