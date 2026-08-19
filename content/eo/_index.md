@@ -24,9 +24,11 @@ links:
     url: "https://crowdin.com/profile/catspeak"
     group: "traduko"
   - name: "framasoft weblate"
+    icon: "weblate"
     url: "https://weblate.framasoft.org/user/camegone/"
     group: "traduko"
   - name: "hosted weblate"
+    icon: "weblate"
     url: "https://hosted.weblate.org/user/camegone/"
     group: "traduko"
 
@@ -44,6 +46,7 @@ links:
     group: "socia_reto"
   
   - name: "scrapbox (malnova mem-enkonduko)"
+    icon: "scrapbox"
     url: "https://scrapbox.io/Blog-Camegone/camegone"
     group: "alio"
   - name: "steam"

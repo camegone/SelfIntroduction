@@ -24,9 +24,11 @@ links:
     url: "https://crowdin.com/profile/catspeak"
     group: "翻訳"
   - name: "framasoft weblate"
+    icon: "weblate"
     url: "https://weblate.framasoft.org/user/camegone/"
     group: "翻訳"
   - name: "hosted weblate"
+    icon: "weblate"
     url: "https://hosted.weblate.org/user/camegone/"
     group: "翻訳"
 
@@ -44,6 +46,7 @@ links:
     group: "sns"
   
   - name: "scrapbox (旧自己紹介ページ)"
+    icon: "scrapbox"
     url: "https://scrapbox.io/Blog-Camegone/camegone"
     group: "その他"
   - name: "steam"
