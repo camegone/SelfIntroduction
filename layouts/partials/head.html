@@ -8,30 +8,33 @@
 {{ range .AllTranslations }}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{ end }}
-<link rel="alternate" hreflang="x-default" href="{{ "/en/" | absURL }}">
+<link rel="alternate" hreflang="x-default" href="{{ " /en/" | absURL }}">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+<link
+  href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+  rel="stylesheet">
+<link rel="stylesheet" href="{{ " css/style.css" | relURL }}">
 
 {{ with resources.Get "images/background/bg-light.png" }}
-  {{ $lightAvif := .Resize (printf "%dx%d avif q45" .Width .Height) }}
-  {{ $lightJpg := .Resize "x480 jpg q60" }}
-  {{ with resources.Get "images/background/bg-dark.png" }}
-    {{ $darkAvif := .Resize (printf "%dx%d avif q45" .Width .Height) }}
-    {{ $darkJpg := .Resize "x480 jpg q60" }}
+{{ $lightAvif := .Resize (printf "%dx%d avif q50" .Width .Height) }}
+{{ $lightJpg := .Resize "x480 jpg q60" }}
+{{ with resources.Get "images/background/bg-dark.png" }}
+{{ $darkAvif := .Resize (printf "%dx%d avif q50" .Width .Height) }}
+{{ $darkJpg := .Resize "x480 jpg q60" }}
 <style>
   :root {
     --bg-image: image-set(url("{{ $lightAvif.RelPermalink }}") type("image/avif"), url("{{ $lightJpg.RelPermalink }}") type("image/jpeg"));
   }
+
   @media (prefers-color-scheme: dark) {
     :root {
       --bg-image: image-set(url("{{ $darkAvif.RelPermalink }}") type("image/avif"), url("{{ $darkJpg.RelPermalink }}") type("image/jpeg"));
     }
   }
 </style>
-  {{ end }}
+{{ end }}
 {{ end }}
 
 <script type="application/ld+json">
