@@ -130,6 +130,7 @@ a:focus-visible, button:focus-visible {
 .ls-list .arrow { color: var(--muted); }
 .ls-list .lurl { color: var(--muted); word-break: break-all; }
 
+.lang-switch { margin-bottom: var(--space-2); }
 .lang-switch ul {
   list-style: none;
   display: flex;
