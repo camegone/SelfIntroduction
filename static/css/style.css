@@ -124,6 +124,8 @@ a:focus-visible, button:focus-visible {
   text-decoration: none;
 }
 .ls-list .perm { color: var(--border); }
+.ls-list .licon { display: inline-flex; color: var(--muted); }
+.ls-list .licon svg { width: 1em; height: 1em; fill: currentColor; }
 .ls-list .lname { color: var(--add); font-weight: 600; }
 .ls-list .arrow { color: var(--muted); }
 .ls-list .lurl { color: var(--muted); word-break: break-all; }

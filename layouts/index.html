@@ -26,6 +26,9 @@
       <li>
         <a href="{{ .url }}" rel="me noopener" target="_blank">
           <span class="perm">drwxr-xr-x</span>
+          {{ with resources.Get (printf "icons/simple/%s.svg" .name) }}
+          <span class="licon">{{ .Content | safeHTML }}</span>
+          {{ end }}
           <span class="lname">{{ .name }}</span>
           <span class="arrow">&rarr;</span>
           <span class="lurl">{{ .url }}</span>
