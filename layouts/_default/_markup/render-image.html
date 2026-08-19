@@ -1,0 +1,63 @@
+{{- /* Markdownの入力情報を変数に格納 */ -}} {{- $destination := .Destination
+-}} {{- $alt := .Text -}} {{- $title := .Title -}} {{- /*
+ページバンドル（同じフォルダ内）から画像を取得 */ -}} {{- $img :=
+.Page.Resources.GetMatch $destination -}} {{- if $img -}} {{- /*
+アニメーションGIFの判定ロジック */ -}} {{- $isAnimated := false -}} {{- if eq
+$img.MediaType.Subtype "gif" -}} {{- if gt (len $img.Content.Delay) 1 -}} {{-
+$isAnimated = true -}} {{- end -}} {{- end -}}
+
+<figure class="md-image-container">
+  <picture>
+    {{- if $isAnimated -}} {{- /* 【アニメーション画像の場合】 */ -}} {{- /*
+    AVIFに変換（アニメを維持したまま最大幅1920pxにリサイズ） */ -}} {{- $avif :=
+    $img.Process "resize 1920x q85 avif" -}} {{- /*
+    フォールバック用GIF（最大幅854pxにリサイズして軽量化） */ -}} {{- $gif :=
+    $img.Process "resize 854x gif" -}}
+
+    <source srcset="{{ $avif.RelPermalink }}" type="image/avif" />
+    <img
+      src="{{ $gif.RelPermalink }}"
+      width="{{ $gif.Width }}"
+      height="{{ $gif.Height }}"
+      alt="{{ $alt }}"
+      loading="lazy"
+    />
+
+    {{- else -}} {{- /* 【通常の静止画の場合】 */ -}} {{- /* AVIF (1080p /
+    横幅最大1920px) */ -}} {{- $avif := $img.Process "resize 1920x q85 avif" -}}
+    {{- /* フォールバックJPG (480p / 横幅最大854px) */ -}} {{- $jpg :=
+    $img.Process "resize 854x q80 jpg" -}}
+
+    <source srcset="{{ $avif.RelPermalink }}" type="image/avif" />
+    <img
+      src="{{ $jpg.RelPermalink }}"
+      width="{{ $jpg.Width }}"
+      height="{{ $jpg.Height }}"
+      alt="{{ $alt }}"
+      loading="lazy"
+    />
+    {{- end -}}
+  </picture>
+
+  {{- /* Markdownで "タイトル" が指定されていればキャプションとして表示 */ -}}
+  {{- with $title -}}
+  <figcaption class="md-image-caption">{{ . | safeHTML }}</figcaption>
+  {{- end -}}
+</figure>
+
+{{- else -}} {{- /*
+画像が見つからない場合は、外部URLや従来のパスのまま通常のimg要素として出力 */
+-}}
+<img
+  src="{{ $destination | safeURL }}"
+  alt="{{ $alt }}"
+  {{
+  with
+  $title
+  }}title="{{ . }}"
+  {{
+  end
+  }}
+  loading="lazy"
+/>
+{{- end -}}
