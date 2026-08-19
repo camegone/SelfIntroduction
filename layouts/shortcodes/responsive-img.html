@@ -1,0 +1,38 @@
+{{ $src := .Get "src" }}
+{{ $img := .Page.Resources.Get $src }}
+
+{{ if $img }}
+  {{/* アニメーションGIFの判定 */}}
+  {{ $isAnimated := false }}
+  {{ if eq $img.MediaType.Subtype "gif" }}
+    {{/* GIFのDelay（フレーム間の遅延）が複数あればアニメーションとみなす */}}
+    {{ if gt (len $img.Content.Delay) 1 }}
+      {{ $isAnimated = true }}
+    {{ end }}
+  {{ end }}
+
+  <picture>
+    {{ if $isAnimated }}
+      {{/* 【アニメーションGIFの場合】 */}}
+      {{/* AVIFに変換（アニメーションを維持したまま1080p相当にリサイズ） */}}
+      {{ $avif := $img.Process "resize 1920x q85 avif" }}
+      {{/* フォールバック用GIF（480p相当にリサイズ） */}}
+      {{ $gif := $img.Process "resize 854x gif" }}
+      
+      <source srcset="{{ $avif.RelPermalink }}" type="image/avif">
+      <img src="{{ $gif.RelPermalink }}" width="{{ $gif.Width }}" height="{{ $gif.Height }}" alt="{{ .Get "alt" }}" loading="lazy">
+
+    {{ else }}
+      {{/* 【通常の静止画の場合】 */}}
+      {{/* AVIF (1080p) */}}
+      {{ $avif := $img.Process "resize 1920x q85 avif" }}
+      {{/* フォールバックJPG (480p) */}}
+      {{ $jpg := $img.Process "resize 854x q80 jpg" }}
+      
+      <source srcset="{{ $avif.RelPermalink }}" type="image/avif">
+      <img src="{{ $jpg.RelPermalink }}" width="{{ $jpg.Width }}" height="{{ $jpg.Height }}" alt="{{ .Get "alt" }}" loading="lazy">
+    {{ end }}
+  </picture>
+{{ else }}
+  <p style="color:red;">画像が見つかりません: {{ $src }}</p>
+{{ end }}
