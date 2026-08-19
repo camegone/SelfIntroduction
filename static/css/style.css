@@ -45,6 +45,7 @@ body {
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--ink);
   font-family: var(--font-sans);
   line-height: 1.8;
