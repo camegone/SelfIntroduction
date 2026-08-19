@@ -44,22 +44,31 @@
 
   <section class="links">
     <h2 class="section-title">links</h2>
-    <p class="prompt"><span class="prompt-sym">$</span> ls -la ~/links</p>
-    <ul class="ls-list">
-      {{ range .Params.links }}
-      <li>
-        <a href="{{ .url }}" rel="me noopener" target="_blank">
-          <span class="perm">drwxr-xr-x</span>
-          {{ with resources.Get (printf "icons/simple/%s.svg" .name) }}
-          <span class="licon">{{ .Content | safeHTML }}</span>
+    {{ $groups := slice }}
+    {{ range .Params.links }}
+      {{ $groups = $groups | append .group }}
+    {{ end }}
+    {{ range $groups | uniq }}
+      {{ $group := . }}
+      <div class="link-group">
+        <p class="prompt"><span class="prompt-sym">$</span> ls -la ~/links/{{ $group }}</p>
+        <ul class="ls-list">
+          {{ range where $.Params.links "group" $group }}
+          <li>
+            <a href="{{ .url }}" rel="me noopener" target="_blank">
+              <span class="perm">drwxr-xr-x</span>
+              {{ with resources.Get (printf "icons/simple/%s.svg" .name) }}
+              <span class="licon">{{ .Content | safeHTML }}</span>
+              {{ end }}
+              <span class="lname">{{ .name }}</span>
+              <span class="arrow">&rarr;</span>
+              <span class="lurl">{{ .url }}</span>
+            </a>
+          </li>
           {{ end }}
-          <span class="lname">{{ .name }}</span>
-          <span class="arrow">&rarr;</span>
-          <span class="lurl">{{ .url }}</span>
-        </a>
-      </li>
-      {{ end }}
-    </ul>
+        </ul>
+      </div>
+    {{ end }}
   </section>
 
 </div>
