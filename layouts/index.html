@@ -1,21 +1,19 @@
 {{ define "main" }}
 <div class="terminal">
-
   <header class="hero">
-    {{ if eq .Lang "ja" }}
-      <p class="prompt"><span class="prompt-sym">$</span> whoami</p>
-    {{ else }}
-      <p class="diff-head">--- locale/ja.po<br>+++ locale/{{ .Lang }}.po</p>
+    {{ if eq .Lang "ja" }} {{ else }}
+    <p class="diff-head">--- locale/ja.po<br />+++ locale/{{ .Lang }}.po</p>
     {{ end }}
+
+    <p class="prompt"><span class="prompt-sym">$</span> whoami</p>
+
     <h1 class="name">{{ .Title }}</h1>
     <p class="role">{{ .Params.role }}</p>
   </header>
 
   <section class="about">
     <h2 class="section-title">about</h2>
-    <div class="prose">
-      {{ .Content }}
-    </div>
+    <div class="prose">{{ .Content }}</div>
   </section>
 
   <section class="links">
@@ -43,13 +41,25 @@
     <ul>
       {{ range .AllTranslations }}
       <li>
-        <a href="{{ .RelPermalink }}"{{ if eq .Lang $.Lang }} class="current" aria-current="page"{{ end }}>
+        <a
+          href="{{ .RelPermalink }}"
+          {{
+          if
+          eq
+          .Lang
+          $.Lang
+          }}
+          class="current"
+          aria-current="page"
+          {{
+          end
+          }}
+        >
           {{ .Language.Label }}
         </a>
       </li>
       {{ end }}
     </ul>
   </footer>
-
 </div>
 {{ end }}
