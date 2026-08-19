@@ -14,7 +14,7 @@ links:
     group: "creative"
   - name: "x"
     url: "https://x.com/camegone"
-    group: "sns"
+    group: "social_media"
 ---
 
 I got into software UI localization through Japanese translation work for VRChat, and now translate a wide range of Linux free & open-source software from English into Japanese.

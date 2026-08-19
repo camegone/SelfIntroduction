@@ -5,16 +5,16 @@ role: "Memproklamita komencanta inĝeniero"
 links:
   - name: "liberapay"
     url: "https://liberapay.com/camegone"
-    group: "donate"
+    group: "donaco"
   - name: "github"
     url: "https://github.com/camegone"
-    group: "creative"
+    group: "kreiva"
   - name: "booth"
     url: "https://camegone-gc.booth.pm/"
-    group: "creative"
+    group: "kreiva"
   - name: "x"
     url: "https://x.com/camegone"
-    group: "sns"
+    group: "socia_reto"
 ---
 
 Mi komencis traduki program-fasadojn (UI) danke al mia japanlingva tradukado por VRChat, kaj nun mi tradukas multajn liberajn kaj malfermkodajn programojn de Linukso el la angla al la japana.
