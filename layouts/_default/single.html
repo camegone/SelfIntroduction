@@ -1,0 +1,43 @@
+{{ define "main" }}
+<div class="terminal">
+  <header class="hero">
+    <nav class="lang-switch">
+      <p class="prompt"><span class="prompt-sym">$</span> export LANG=</p>
+      <ul>
+        {{ range .AllTranslations }}
+        <li>
+          <a
+            href="{{ .RelPermalink }}"
+            {{
+            if
+            eq
+            .Lang
+            $.Lang
+            }}
+            class="current"
+            aria-current="page"
+            {{
+            end
+            }}
+          >
+            {{ .Language.Label }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+
+    {{ if eq .Lang "ja" }} {{ else }}
+    <p class="diff-head">--- locale/ja.po<br />+++ locale/{{ .Lang }}.po</p>
+    {{ end }}
+
+    <p class="prompt"><span class="prompt-sym">$</span> cat {{ .Title }}.md</p>
+
+    <h1 class="name">{{ .Title }}</h1>
+  </header>
+
+  <section class="about">
+    <div class="prose">{{ .Content }}</div>
+  </section>
+</div>
+{{ end }}
