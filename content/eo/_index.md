@@ -63,4 +63,5 @@ Mi ankaŭ publikigas program-kromaĵojn en GitHub, kaj VRChat/Unity-rilatajn val
 
 Mi volas, ke multaj homoj povu uzi miajn verkojn, do la plimulto estas senpaga. Se vi tamen volas subteni min, eĉ malgranda donaco — proksimume la kosto de tagaj manĝoj — tre ĝojigus min.
 
-[Miaj sukcesaj ekzamenoj (nur la japana)](/ja/quolifications/) {{/* <-サイトのルートからの絶対パスのため注意 */}}
+[Miaj sukcesaj ekzamenoj (nur la japana)](/ja/quolifications/)
+<!-- {{/* ^ note: サイトのルートからの絶対パスのため注意 */}} -->
