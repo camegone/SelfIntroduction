@@ -50,8 +50,8 @@
     {{ end }}
     {{ range $groups | uniq }}
       {{ $group := . }}
-      <div class="link-group">
-        <p class="prompt"><span class="prompt-sym">$</span> ls -la ~/links/{{ $group }}</p>
+      <details class="link-group" open>
+        <summary class="prompt"><span class="prompt-sym">$</span> ls -la ~/links/{{ $group }}</summary>
         <ul class="ls-list">
           {{ range where $.Params.links "group" $group }}
           <li>
@@ -68,7 +68,7 @@
           </li>
           {{ end }}
         </ul>
-      </div>
+      </details>
     {{ end }}
   </section>
 

@@ -131,6 +131,26 @@ a:focus-visible, button:focus-visible {
 
 .links { margin-bottom: var(--space-4); }
 .link-group + .link-group { margin-top: var(--space-3); }
+.link-group summary.prompt {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+.link-group summary.prompt::-webkit-details-marker { display: none; }
+.link-group summary.prompt::after {
+  content: '▸';
+  margin-left: auto;
+  color: var(--muted);
+  transition: transform 0.15s ease;
+}
+.link-group[open] summary.prompt::after { transform: rotate(90deg); }
+.link-group summary.prompt:hover,
+.link-group summary.prompt:focus-visible {
+  color: var(--add);
+}
+.link-group summary.prompt:focus-visible { outline: 2px solid var(--add); outline-offset: 3px; }
 .ls-list { list-style: none; margin: 0; padding: 0; }
 .ls-list li + li { margin-top: var(--space-1); }
 .ls-list a {
