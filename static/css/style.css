@@ -8,9 +8,51 @@
   --remove:     #B23A2E;
   --border:     #D9DFCF;
 
+  /* font stack prefers easy-to-read (UD) system fonts */
+  /* cf. https://share.google/aimode/o3jKsNakJxBCvWzSh */
+  --font-sans:
+    /* [English Fonts] */
+    /* Apple devices */
+    -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial,
+    /* Android */
+    "Roboto", "Droid Sans",
+    /* Linux */
+    "Ubuntu", "Liberation Sans", "DejaVu Sans",
+    /* [Japanese Fonts] */
+    /* Apple devices */
+    "Hiragino Sans", "Hiragino Kaku Gothic Neo", "Hiragino Kaku Gothic ProN",
+    /* Windows */
+    "BIZ UDPGothic", "Noto Sans Jp", "Meiryo", "メイリオ",
+    /* Android */
+    "Noto Sans CJK JP",
+    /* Linux */
+    "Noto Sans",
+    /* last resort */
+    sans-serif;
+  
+  --font-mono:
+    /* [English Fonts] */
+    /* Apple devices */
+    "SF Mono", "Menlo", "Monaco",
+    /* Windows */
+    "Cascadia Code", "Consolas", "Courier New",
+    /* Android */
+    "Roboto Mono", "Droid Sans Mono",
+    /* Linux */
+    "Ubuntu Mono", "Liberation Mono", "DejaVu Sans Mono",
+    /* [Japanese Fonts] */
+    /* Windows */
+    "BIZ UDGothic",
+    /* Android */
+    "Noto Sans Mono",
+    /* last resort */
+    monospace;
+  
+  /* old font stack */
+  /*
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --font-sans: 'Noto Sans JP', 'Hiragino Sans', system-ui, -apple-system, sans-serif;
-
+  */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.75rem;
