@@ -62,3 +62,5 @@ Mi komencis traduki program-fasadojn (UI) danke al mia japanlingva tradukado por
 Mi ankaŭ publikigas program-kromaĵojn en GitHub, kaj VRChat/Unity-rilatajn valoraĵojn ("gimmicks") en Booth.
 
 Mi volas, ke multaj homoj povu uzi miajn verkojn, do la plimulto estas senpaga. Se vi tamen volas subteni min, eĉ malgranda donaco — proksimume la kosto de tagaj manĝoj — tre ĝojigus min.
+
+[Miaj sukcesaj ekzamenoj (nur la japana)]({{ ref "/ja/quolifications.md" }})

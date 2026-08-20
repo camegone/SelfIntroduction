@@ -62,3 +62,5 @@ I got into software UI localization through Japanese translation work for VRChat
 I also publish software add-ons on GitHub, and VRChat/Unity-related assets ("gimmicks") on Booth.
 
 I want as many people as possible to be able to use my work, so most of it is released for free. If you'd like to support me anyway, even a small donation — about what I'd spend on a day's meals — would make me very happy.
+
+[My Passed Qualifications (Japanese only)]({{ ref "/ja/quolifications.md" }})
