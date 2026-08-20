@@ -6,20 +6,7 @@
       <ul>
         {{ range .AllTranslations }}
         <li>
-          <a
-            href="{{ .RelPermalink }}"
-            {{
-            if
-            eq
-            .Lang
-            $.Lang
-            }}
-            class="current"
-            aria-current="page"
-            {{
-            end
-            }}
-          >
+          <a href="{{ .RelPermalink }}" {{ if eq .Lang $.Lang }} class="current" aria-current="page" {{ end }}>
             {{ .Language.Label }}
           </a>
         </li>
@@ -31,7 +18,7 @@
     <p class="diff-head">--- locale/ja.po<br />+++ locale/{{ .Lang }}.po</p>
     {{ end }}
 
-    <p class="prompt"><span class="prompt-sym">$</span> cat {{ .Title }}.md</p>
+    <p class="prompt"><span class="prompt-sym">$</span> cat "{{ .Title }}.md"</p>
 
     <h1 class="name">{{ .Title }}</h1>
   </header>
