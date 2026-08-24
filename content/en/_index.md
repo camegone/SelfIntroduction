@@ -4,6 +4,10 @@ description: "Profile of camegone (かめごん), a self-proclaimed aspiring eng
 role: "Aspiring engineer (self-proclaimed)"
 linksTitle: "links"
 links:
+  - name: "ko-fi"
+    icon: "kofi"
+    url: "https://ko-fi.com/camegone"
+    group: "donation"
   - name: "liberapay"
     url: "https://liberapay.com/camegone"
     group: "donation"

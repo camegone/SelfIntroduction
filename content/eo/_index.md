@@ -4,9 +4,13 @@ description: "Profilo de camegone (かめごん), memproklamita komencanta inĝe
 role: "(Memproklamita) komencanta inĝeniero"
 linksTitle: "ligiloj"
 links:
+  - name: "ko-fi"
+    icon: "kofi"
+    url: "https://ko-fi.com/camegone"
+    group: "subteno"
   - name: "liberapay"
     url: "https://liberapay.com/camegone"
-    group: "donaco"
+    group: "subteno"
 
   - name: "booth"
     url: "https://camegone-gc.booth.pm/"

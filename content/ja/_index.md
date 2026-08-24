@@ -4,6 +4,10 @@ description: "かめごん（camegone）のプロフィール。自称エンジ�
 role: "(自称) エンジニアの卵"
 linksTitle: "リンク"
 links:
+  - name: "ko-fi"
+    icon: "kofi"
+    url: "https://ko-fi.com/camegone"
+    group: "寄付"
   - name: "liberapay"
     url: "https://liberapay.com/camegone"
     group: "寄付"
