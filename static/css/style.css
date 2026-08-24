@@ -162,7 +162,7 @@ a:focus-visible, button:focus-visible {
 .section-title,
 .prose h2 {
   font-family: var(--font-mono);
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   color: var(--muted);
   margin: 0 0 var(--space-2);
   font-weight: 600;
