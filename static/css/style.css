@@ -10,10 +10,14 @@
 
   /* font stack prefers easy-to-read (UD) system fonts */
   /* cf. https://share.google/aimode/o3jKsNakJxBCvWzSh */
+  /* it is better to put language is outside and devices spec is inside */
+  /* it is because of maintenance efficiency */
   --font-sans:
     /* [English Fonts] */
     /* Apple devices */
     -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial,
+    /* Windows */
+    
     /* Android */
     "Roboto", "Droid Sans",
     /* Linux */
@@ -41,10 +45,14 @@
     /* Linux */
     "Ubuntu Mono", "Liberation Mono", "DejaVu Sans Mono",
     /* [Japanese Fonts] */
+    /* Apple devices */
+    
     /* Windows */
     "BIZ UDGothic",
     /* Android */
     "Noto Sans Mono",
+    /* Linux */
+
     /* last resort */
     monospace;
   
