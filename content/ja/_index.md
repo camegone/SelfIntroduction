@@ -2,6 +2,7 @@
 title: "camegone"
 description: "かめごん（camegone）のプロフィール。自称エンジニアの卵。Linuxフリー/オープンソースソフトウェアの英日翻訳、GitHubでのアドオン公開、BoothでのVRChat/Unityアセット公開など。"
 role: "(自称) エンジニアの卵"
+linksTitle: "リンク"
 links:
   - name: "liberapay"
     url: "https://liberapay.com/camegone"
@@ -56,6 +57,8 @@ links:
     url: "https://vrchat.com/home/user/usr_6cc858ae-5168-4f4d-bee5-a76c6588e955"
     group: "その他"
 ---
+
+## 自己紹介
 
 VRChatの日本語訳をきっかけに、ソフトウェアのUI翻訳を始めました。今ではLinuxのフリー・オープンソースソフトウェアを中心に、数多くの英日翻訳を行っています。
 

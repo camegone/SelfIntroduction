@@ -159,14 +159,16 @@ a:focus-visible, button:focus-visible {
   margin: var(--space-1) 0 0;
 }
 
-.section-title {
+.section-title,
+.prose h2 {
   font-family: var(--font-mono);
   font-size: 0.95rem;
   color: var(--muted);
   margin: 0 0 var(--space-2);
   font-weight: 600;
 }
-.section-title::before { content: '## '; color: var(--border); }
+.section-title::before,
+.prose h2::before { content: '## '; color: var(--border); }
 
 .about { margin-bottom: var(--space-4); }
 .prose p { margin: 0 0 var(--space-2); }

@@ -2,6 +2,7 @@
 title: "camegone"
 description: "Profilo de camegone (かめごん), memproklamita komencanta inĝeniero. Tradukas Linuksajn liberajn/malfermkodajn programojn el la angla al la japana, publikigas kromprogramojn en GitHub kaj VRChat/Unity-valoraĵojn en Booth."
 role: "(Memproklamita) komencanta inĝeniero"
+linksTitle: "ligiloj"
 links:
   - name: "liberapay"
     url: "https://liberapay.com/camegone"
@@ -56,6 +57,8 @@ links:
     url: "https://vrchat.com/home/user/usr_6cc858ae-5168-4f4d-bee5-a76c6588e955"
     group: "alio"
 ---
+
+## pri mi
 
 Mi komencis traduki program-fasadojn (UI) danke al mia japanlingva tradukado por VRChat, kaj nun mi tradukas multajn liberajn kaj malfermkodajn programojn de Linukso el la angla al la japana.
 
