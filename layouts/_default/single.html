@@ -7,7 +7,7 @@
         {{ range .AllTranslations }}
         <li>
           <a href="{{ .RelPermalink }}" {{ if eq .Lang $.Lang }} class="current" aria-current="page" {{ end }}>
-            {{ .Language.LanguageName }}
+            {{ .Language.Label }}
           </a>
         </li>
         {{ end }}
