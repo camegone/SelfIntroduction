@@ -3,7 +3,7 @@
   --surface:    #FBFCF8;
   --surface-rgb: 251, 252, 248;
   --ink:        #1C231D;
-  --muted:      #545F4B;
+  --muted:      #2d3b3f;
   --add:        #1E7A46;
   --remove:     #B23A2E;
   --border:     #D9DFCF;
@@ -74,7 +74,7 @@
     --surface:    #1B1F17;
     --surface-rgb: 27, 31, 23;
     --ink:        #E8ECDF;
-    --muted:      #ADB89F;
+    --muted:      #b5d5df;
     --add:        #4CC98A;
     --remove:     #E2695C;
     --border:     #2C3226;
