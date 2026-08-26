@@ -3,6 +3,7 @@
   --surface:    #FBFCF8;
   --surface-rgb: 251, 252, 248;
   --ink:        #1C231D;
+  --sub-text:   #1fb791;
   --muted:      #475d63;
   --add:        #1E7A46;
   --remove:     #B23A2E;
@@ -74,6 +75,7 @@
     --surface:    #1B1F17;
     --surface-rgb: 27, 31, 23;
     --ink:        #E8ECDF;
+    --sub-text:   #14775e;
     --muted:      #b5d5df;
     --add:        #4CC98A;
     --remove:     #E2695C;
@@ -123,7 +125,7 @@ a:focus-visible, button:focus-visible {
   margin: 0 0 var(--space-2);
 }
 .prompt-sym { color: var(--add); margin-right: 0.4em; }
-.comment { color: var(--muted); margin-left: 0.5em; }
+.comment { color: var(--sub-text); margin-left: 0.5em; }
 
 .diff-head {
   font-family: var(--font-mono);
@@ -221,7 +223,7 @@ a:focus-visible, button:focus-visible {
   background: var(--surface);
   text-decoration: none;
 }
-.ls-list .perm { color: var(--muted); }
+.ls-list .perm { color: var(--sub-text); }
 .ls-list .licon { display: inline-flex; color: var(--muted); }
 .ls-list .licon svg { width: 1em; height: 1em; fill: currentColor; }
 .ls-list .lname { color: var(--add); font-weight: 600; }
