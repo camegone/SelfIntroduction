@@ -123,6 +123,7 @@ a:focus-visible, button:focus-visible {
   margin: 0 0 var(--space-2);
 }
 .prompt-sym { color: var(--add); margin-right: 0.4em; }
+.comment { color: var(--border); margin-left: 0.5em; }
 
 .diff-head {
   font-family: var(--font-mono);
@@ -246,6 +247,9 @@ a:focus-visible, button:focus-visible {
   text-decoration-color: var(--add);
   text-decoration-thickness: 2px;
 }
+
+.meta { margin-top: var(--space-4); }
+.meta .diff-head { margin: 0; }
 
 @media (max-width: 480px) {
   .terminal { padding: var(--space-4) var(--space-2) var(--space-3); }

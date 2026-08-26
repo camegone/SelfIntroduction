@@ -4,6 +4,7 @@ locale = "ja-JP"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 enableRobotsTXT = true
+enableGitInfo = true
 disableKinds = ["taxonomy", "term"]   # tags/categories等の未使用ページを生成しない
 
 [languages]

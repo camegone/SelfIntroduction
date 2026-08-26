@@ -71,5 +71,16 @@
     {{ end }}
   </section>
 
+  <footer class="meta">
+    <p class="prompt">
+      <span class="prompt-sym">$</span> git log -1 --format=%cd --date=short
+      {{ if eq .Lang "ja" }}<span class="comment"># 最終更新日</span>
+      {{ else if eq .Lang "en" }}<span class="comment"># last updated date</span>
+      {{ else }}<span class="comment"># lasta ĝisdatigo</span>
+      {{ end }}
+    </p>
+    <p class="diff-head">{{ .Lastmod.Format "2006-01-02" }}</p>
+  </footer>
+
 </div>
 {{ end }}
