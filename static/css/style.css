@@ -247,6 +247,9 @@ a:focus-visible, button:focus-visible {
   text-decoration-thickness: 2px;
 }
 
+.meta { margin-top: var(--space-4); }
+.meta .diff-head { margin: 0; }
+
 @media (max-width: 480px) {
   .terminal { padding: var(--space-4) var(--space-2) var(--space-3); }
 }

@@ -71,5 +71,10 @@
     {{ end }}
   </section>
 
+  <footer class="meta">
+    <p class="prompt"><span class="prompt-sym">$</span> git log -1 --format=%cd --date=short</p>
+    <p class="diff-head">{{ .Lastmod.Format "2006-01-02" }}</p>
+  </footer>
+
 </div>
 {{ end }}
