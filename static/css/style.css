@@ -123,6 +123,7 @@ a:focus-visible, button:focus-visible {
   margin: 0 0 var(--space-2);
 }
 .prompt-sym { color: var(--add); margin-right: 0.4em; }
+.comment { color: var(--border); margin-left: 0.5em; }
 
 .diff-head {
   font-family: var(--font-mono);
