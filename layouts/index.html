@@ -29,8 +29,8 @@
 
     {{ if eq .Lang "ja" }} {{ else }}
     <p class="diff-head">
-      <span class="diff-remove">-- locale/ja.po</span><br />
-      <span class="diff-add">++ locale/{{ .Lang }}.po</span>
+      <span class="diff-remove">--- locale/ja.po</span><br />
+      <span class="diff-add">+++ locale/{{ .Lang }}.po</span>
     </p>
     {{ end }}
 
