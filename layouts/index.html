@@ -28,7 +28,10 @@
     </nav>
 
     {{ if eq .Lang "ja" }} {{ else }}
-    <p class="diff-head">--- locale/ja.po<br />+++ locale/{{ .Lang }}.po</p>
+    <p class="diff-head">
+      <span class="diff-remove">-- locale/ja.po</span><br />
+      <span class="diff-add">++ locale/{{ .Lang }}.po</span>
+    </p>
     {{ end }}
 
     <p class="prompt"><span class="prompt-sym">$</span> whoami</p>
@@ -73,10 +76,12 @@
 
   <footer class="meta">
     <p class="prompt">
+      <!-- command to show last updated date -->
       <span class="prompt-sym">$</span> git log -1 --format=%cd --date=short
       {{ if eq .Lang "ja" }}<span class="comment"># 最終更新日</span>
-      {{ else if eq .Lang "en" }}<span class="comment"># last updated date</span>
-      {{ else }}<span class="comment"># lasta ĝisdatigo</span>
+      {{ else if eq .Lang "eo" }}<span class="comment"># lasta ĝisdatigo</span>
+      <!-- fallback into en -->
+      {{ else }}<span class="comment"># last updated date</span>
       {{ end }}
     </p>
     <p class="diff-head">{{ .Lastmod.Format "2006-01-02" }}</p>

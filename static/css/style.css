@@ -139,6 +139,14 @@ a:focus-visible, button:focus-visible {
   line-height: 1.6;
 }
 
+.diff-add {
+  color: var(--add);
+}
+
+.diff-remove {
+  color: var(--remove);
+}
+
 .hero { margin-bottom: var(--space-4); }
 
 .name {
