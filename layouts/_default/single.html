@@ -15,7 +15,10 @@
     </nav>
 
     {{ if eq .Lang "ja" }} {{ else }}
-    <p class="diff-head">--- locale/ja.po<br />+++ locale/{{ .Lang }}.po</p>
+    <p class="diff-head">
+      <span class="diff-remove">-- locale/ja.po</span><br />
+      <span class="diff-add">++ locale/{{ .Lang }}.po</span>
+    </p>
     {{ end }}
 
     <p class="prompt"><span class="prompt-sym">$</span> cat "{{ .Title }}.md"</p>
