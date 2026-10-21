@@ -75,4 +75,5 @@ links:
 
 また、最近はnoteやZennでブログ記事を書いたりもしています。ぜひご覧ください。
 
-[取得した資格、検定などはこちら]({{< ref "/quolifications.md" >}})
+<!-- ref を relref に変更 -->
+[取得した資格、検定などはこちら]({{< relref "/quolifications.md" >}})
