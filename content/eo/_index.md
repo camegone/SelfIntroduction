@@ -24,6 +24,9 @@ links:
   - name: "note"
     url: "https://note.com/camegone_c4t"
     group: "kreado"
+  - name: "zenn"
+    url: "https://zenn.dev/camegone"
+    group: "kreado"
 
   - name: "crowdin"
     url: "https://crowdin.com/profile/catspeak"
@@ -64,11 +67,13 @@ links:
 
 ## pri mi
 
-Mi komencis traduki program-fasadojn (UI) danke al mia japanlingva tradukado por VRChat, kaj nun mi tradukas multajn liberajn kaj malfermkodajn programojn de Linukso el la angla al la japana.
+Salton! Mi estas camegone (kamegon). Mi komencis traduki program-fasadojn (UI) danke al mia japanlingva tradukado por VRChat, kaj nun mi tradukas multajn liberajn kaj malfermkodajn programojn de Linukso el la angla al la japana.
 
 Mi ankaŭ publikigas program-kromaĵojn en GitHub, kaj VRChat/Unity-rilatajn valoraĵojn ("gimmicks") en Booth.
 
 Mi volas, ke multaj homoj povu uzi miajn verkojn, do la plimulto estas senpaga. Se vi tamen volas subteni min, eĉ malgranda donaco — proksimume la kosto de tagaj manĝoj — tre ĝojigus min.
+
+Mi ankaŭ komencis verki blog-artikolojn pri aferoj, kiujn mi provis. Bonvolu rigardi ilin en note kaj Zenn! (Originalaj artikoloj estas verkitaj en la japana, sed ankaŭ estas aŭtomate tradukitaj anglaj versioj!)
 
 [Miaj sukcesaj ekzamenoj (nur la japana)](/ja/quolifications/)
 <!-- {{/* ^ note: サイトのルートからの絶対パスのため注意 */}} -->

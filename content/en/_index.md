@@ -24,6 +24,9 @@ links:
   - name: "note"
     url: "https://note.com/camegone_c4t"
     group: "creation"
+  - name: "zenn"
+    url: "https://zenn.dev/camegone"
+    group: "creation"
 
   - name: "crowdin"
     url: "https://crowdin.com/profile/catspeak"
@@ -64,11 +67,13 @@ links:
 
 ## about
 
-I got into software UI localization through Japanese translation work for VRChat, and now translate a wide range of Linux free & open-source software from English into Japanese.
+Hi. I'm camegone /kameɡoɴ/ (Google pronounces it like that: "camel" + "gon" without letter "l"). I got into software UI localization through Japanese translation work for VRChat, and now translate a wide range of Linux free & open-source software from English into Japanese.
 
 I also publish software add-ons on GitHub, and VRChat/Unity-related assets ("gimmicks") on Booth.
 
 I want as many people as possible to be able to use my work, so most of it is released for free. If you'd like to support me anyway, even a small donation — about what I'd spend on a day's meals — would make me very happy.
+
+I also started writing blog articles about something I've tried. Please take a look at note and Zenn! (Original articles are written in Japanese, but auto-translated English versions are available!)
 
 [My Passed Qualifications (Japanese only)](/ja/quolifications/)
 <!-- {{/* ^ note: サイトのルートからの絶対パスのため注意 */}} -->
