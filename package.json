@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "description": "camegone self-introduction site (Hugo)",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "wrangler": "^4.151.3"
+  }
 }
